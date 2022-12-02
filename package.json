@@ -1,19 +1,22 @@
 {
-  "name": "bundlers",
+  "name": "app_2022",
   "scripts": {
     "start": "parcel serve ./src/index.html --open",
     "build": "npm run clean && parcel build ./src/index.html --dist-dir ./out --no-source-maps",
     "clean": "rm -rf ./.parcel-cache ./dist ./out",
     "serve": "live-server ./out",
-    "deploy": "surge ./out --domain https://PUT_YOUR_SURGE_DOMAIN_HERE"
+    "deploy": "surge ./out --domain https://verjaardag_Lauren_2022e.surge.sh"
   },
   "devDependencies": {
-    "@babel/core": "^7.14.3",
-    "autoprefixer": "^10.2.6",
-    "postcss": "^8.3.0",
+    "@parcel/packager-raw-url": "^2.8.0",
+    "@parcel/transformer-babel": "^2.8.0",
+    "@parcel/transformer-sass": "^2.8.0",
+    "@parcel/transformer-webmanifest": "^2.8.0",
     "posthtml-include": "^1.7.1"
   },
   "dependencies": {
-    "@parcel/babel-preset-env": "^2.0.0-alpha.3"
+    "@reduxjs/toolkit": "^1.9.1",
+    "bulma": "^0.9.4",
+    "redux-logger": "^3.0.6"
   }
 }
